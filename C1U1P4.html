@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Quiz</title>
+  <style>
+    /* Body & container */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      padding: 40px 20px;
+      background: #f0f4f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+
+    .quiz-container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .quiz-container:hover {
+      transform: translateY(-3px);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    p.question {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #34495e;
+    }
+
+    label {
+      display: block;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    label:hover {
+      background: #e8f0fe;
+      border-color: #4a90e2;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+      accent-color: #4a90e2;
+    }
+
+    .correct {
+      background-color: #e6f7e6 !important;
+      border-color: #28a745 !important;
+      color: #155724;
+      font-weight: bold;
+    }
+
+    .wrong {
+      background-color: #fce8e6 !important;
+      border-color: #dc3545 !important;
+      color: #721c24;
+      font-weight: bold;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #357ab8;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      text-align: center;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>முதல் பருவம் - Part 4 </h2>
+    <form id="quiz">
+	
+	<div class="question-block">
+      <p class="question">1.  தமிழ் எண்களை அறிவோம் – சரியானது எது?</p><br>
+	  <p>I. 1 – ௧</p>
+	  <p>II. 2 – ௨</p>
+	  <p>III. 9 – ௯</p>
+	  <p>IV. 10 – ௧ ௦</p>
+      <label><input type="radio" name="q1" value="I மட்டும் சரி">I மட்டும் சரி</label>
+      <label><input type="radio" name="q1" value="I, II, III, IV அனைத்தும் சரி">I, II, III, IV அனைத்தும் சரி</label>
+	  <label><input type="radio" name="q1" value="I, II மட்டும் சரி">I, II மட்டும் சரி</label>
+	  <label><input type="radio" name="q1" value="III, IV மட்டும் சரி ">III, IV மட்டும் சரி</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">2. சொல் மற்றும் இடம்பெற்ற நூல் சரியானது எது?</p><br>
+	  <p>I. வேளாண்மை – கலித்தொகை (101), திருக்குறள் (81)</p>
+	  <p>II. உழவர் – நற்றிணை (4)</p>
+	  <p>III. பாம்பு – குறுந்தொகை (239)</p>
+	  <p>IV. வெள்ளம் – பதிற்றுப்பத்து (15)</p>
+      <label><input type="radio" name="q2" value="I, II, III மட்டும் சரி">I, II, III மட்டும் சரி</label>
+      <label><input type="radio" name="q2" value="I, II, III, IV அனைத்தும் சரி">I, II, III, IV அனைத்தும் சரி</label>
+	  <label><input type="radio" name="q2" value="III, IV மட்டும் சரி">III, IV மட்டும் சரி</label>
+      <label><input type="radio" name="q2" value="IV மட்டும் சரி">IV மட்டும் சரி</label><br>
+	</div>
+	
+	<div class="question-block">
+      <p class="question">3. சொல் மற்றும் இடம்பெற்ற நூல் சரியானது எது?</p><br>
+	  <p>I. முதலை – குறுந்தொகை (324)</p>
+	  <p>II. கோடை – அகநானூறு (42)</p>
+	  <p>III. உலகம் – தொல்காப்பியம், கிளவியாக்கம் (56), திருமுருகாற்றுப்படை (1)</p>
+	  <p>IV. மருந்து – அகநானூறு (147), திருக்குறள் (952)</p>
+      <label><input type="radio" name="q3" value="I, II, III, IV அனைத்தும் சரி">I, II, III, IV அனைத்தும் சரி</label>
+      <label><input type="radio" name="q3" value="I, II, III மட்டும் சரி">I, II, III மட்டும் சரி</label>
+	  <label><input type="radio" name="q3" value="III, IV மட்டும் சரி">III, IV மட்டும் சரி</label>
+      <label><input type="radio" name="q3" value="IV மட்டும் சரி">IV மட்டும் சரி</label><br>
+	</div>
+	
+	<div class="question-block">
+      <p class="question">4. சொல் மற்றும் இடம்பெற்ற நூல் சரியானது எது?</p><br>
+	  <p>I. ஊர் – தொல்காப்பியம், அகத்திணையியல் (41)</p>
+	  <p>II. அன்பு – தொல்காப்பியம், களவியல் (110), திருக்குறள் (84)</p>
+	  <p>III. உயிர் – தொல்காப்பியம், கிளவியாக்கம் (56), திருக்குறள் (955)</p>
+	  <p>IV. மகிழ்ச்சி – தொல்காப்பியம், கற்பியல் (142), திருக்குறள் (531)</p>
+      <label><input type="radio" name="q4" value="I மட்டும் சரி">I மட்டும் சரி</label>
+      <label><input type="radio" name="q4" value="I, II, III மட்டும் சரி">I, II, III மட்டும் சரி</label>
+	  <label><input type="radio" name="q4" value="III, IV மட்டும் சரி">III, IV மட்டும் சரி</label>
+      <label><input type="radio" name="q4" value="I, II, III, IV அனைத்தும் சரி">I, II, III, IV அனைத்தும் சரி</label><br>
+	</div>
+	
+    <div class="question-block">
+      <p class="question">5. சொல் மற்றும் இடம்பெற்ற நூல் சரியானது எது?</p><br>
+	  <p>I. மீன் – குறுந்தொகை (54)</p>
+	  <p>II. புகழ் – தொல்காப்பியம், வேற்றுமையியல் (71)</p>
+	  <p>III. அரசு – திருக்குறள் (554)</p>
+	  <p>IV. செய் – குறுந்தொகை (72)</p>
+	  <label><input type="radio" name="q5" value="I, II, III மட்டும் சரி">I, II, III மட்டும் சரி</label>
+      <label><input type="radio" name="q5" value="I, II, III, IV அனைத்தும் சரி">I, II, III, IV அனைத்தும் சரி </label>
+	  <label><input type="radio" name="q5" value="III, IV மட்டும் சரி">III, IV மட்டும் சரி</label>
+      <label><input type="radio" name="q5" value="IV மட்டும் சரி">IV மட்டும் சரி</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">6. சொல் மற்றும் இடம்பெற்ற நூல் சரியானது எது?</p>
+	  <p>I. செல் – தொல்காப்பியம், (75) புறத்திணையியல்</p>
+	  <p>II. பார் – பெரும்பாணாற்றுப்படை (435)</p>
+	  <p>III. ஒழி – தொல்காப்பியம், கிளவியாக்கம் (48)</p>
+	  <p>IV. முடி – தொல்காப்பியம், வினையியல் (206)</p>
+      <label><input type="radio" name="q6" value="I, II, III மட்டும் சரி">I, II, III மட்டும் சரி</label>
+      <label><input type="radio" name="q6" value="III, IV மட்டும் சரி">III, IV மட்டும் சரி</label>
+	  <label><input type="radio" name="q6" value="I, II, III, IV அனைத்தும் சரி">I, II, III, IV அனைத்தும் சரி</label>
+      <label><input type="radio" name="q6" value="IV மட்டும் சரி">IV மட்டும் சரி</label><br>
+	</div>
+	
+    <div class="question-block">
+      <p class="question">7. நீண்ட நீண்ட காலம்-நீ, நீடு வாழ வேண்டும்! வானம் தீண்டும் தூரம்-நீ, வளர்ந்து வாழ வேண்டும்! அன்பு வேண்டும்! அறிவு வேண்டும்! பண்பு வேண்டும்! பரிவு வேண்டும்! எட்டுத்திக்கும் புகழ வேண்டும்! எடுத்துக்காட்டு ஆக வேண்டும்! – இந்த பாடல் வரியின் ஆசிரியர் யார்?</p><br>
+	  <label><input type="radio" name="q7" value="திரு.வி.க">திரு.வி.க</label>
+      <label><input type="radio" name="q7" value="தாராபாரதி">தாராபாரதி</label>
+	  <label><input type="radio" name="q7" value="அறிவுமதி">அறிவுமதி</label>
+      <label><input type="radio" name="q7" value="மீனாட்சி சுந்தரனார்">மீனாட்சி சுந்தரனார்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">8. உலகம் பார்க்க உனது பெயரை, நிலவுத் தாளில் எழுதவேண்டும்! சர்க்கரைத் தமிழ் அள்ளி, தாலாட்டு நாள் சொல்லி வாழ்த்துகிறோம்! பிறந்தநாள் வாழ்த்துகள்! பிறந்தநாள் வாழ்த்துகள்! இனிய பிறந்தநாள் வாழ்த்துகள்! – இந்த பாடல் வரியின் ஆசிரியர் யார்?</p></br>
+      <label><input type="radio" name="q8" value="திரு.வி.க">திரு.வி.க</label>
+      <label><input type="radio" name="q8" value="தாராபாரதி">தாராபாரதி</label>
+	  <label><input type="radio" name="q8" value="அறிவுமதி">அறிவுமதி</label>
+      <label><input type="radio" name="q8" value="மீனாட்சி சுந்தரனார்">மீனாட்சி சுந்தரனார்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">9. ‘தொன்மை’ என்னும் சொல்லின் பொருள் ____________</p>
+      <label><input type="radio" name="q9" value="புதுமை">புதுமை</label>
+      <label><input type="radio" name="q9" value="பழமை">பழமை</label>
+	  <label><input type="radio" name="q9" value="பெருமை">பெருமை</label>
+      <label><input type="radio" name="q9" value="சீர்மை">சீர்மை</label><br>
+	</div>
+	
+    <div class="question-block">
+      <p class="question">10. ‘இடப்புறம்’ என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _______________.</p>
+      <label><input type="radio" name="q10" value="இடன் + புறம்">இடன் + புறம்</label>
+      <label><input type="radio" name="q10" value="இட + புறம்">இட + புறம்</label>
+	  <label><input type="radio" name="q10" value="இடம் + புறம்">இடம் + புறம்</label>
+      <label><input type="radio" name="q10" value="இடப் + புறம்">இடப் + புறம்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">11. ‘சீரிளமை’ என்னும் சொல்லைப் பிரித்து எழுதக் கிடைப்பது _______________.</p>
+      <label><input type="radio" name="q11" value="சீர் + இளமை">சீர் + இளமை</label>
+      <label><input type="radio" name="q11" value="சீர்மை + இளமை">சீர்மை + இளமை</label>
+	  <label><input type="radio" name="q11" value="சீரி + இளமை">சீரி + இளமை</label>
+      <label><input type="radio" name="q11" value="சீற் + இள">சீற் + இள</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">12. சிலம்பு + அதிகாரம் என்பதனைச் சேர்த்து எழுதக் கிடைக்கும் சொல் ________________.</p>
+      <label><input type="radio" name="q12" value="சிலம்பதிகாரம்">சிலம்பதிகாரம்</label>
+      <label><input type="radio" name="q12" value="சிலப்பதிகாரம்">சிலப்பதிகாரம்</label>
+	  <label><input type="radio" name="q12" value="சிலம்புதிகாரம்">சிலம்புதிகாரம்</label>
+      <label><input type="radio" name="q12" value="சில பதிகாரம்">சில பதிகாரம்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">13. கணினி + தமிழ் என்பதனைச் சேர்த்து எழுதக் கிடைக்கும் சொல் ________________.</p>
+      <label><input type="radio" name="q13" value="கணினிதமிழ்">கணினிதமிழ்</label>
+      <label><input type="radio" name="q13" value="கணினித்தமிழ்">கணினித்தமிழ்</label>
+	  <label><input type="radio" name="q13" value="கணிணிதமிழ்">கணிணிதமிழ்</label>
+      <label><input type="radio" name="q13" value="கனினிதமிழ்">கனினிதமிழ்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">14. “தமிழ்மொழி போல் இனிதாவது எங்கும் காணோம்” என்று பாடியவர் _____________.</p>
+      <label><input type="radio" name="q14" value="கண்ணதாசன்">கண்ணதாசன்</label>
+      <label><input type="radio" name="q14" value="பாரதியார்">பாரதியார்</label>
+	  <label><input type="radio" name="q14" value="பாரதிதாசன்">பாரதிதாசன்</label>
+      <label><input type="radio" name="q14" value="வாணிதாசன்">வாணிதாசன்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">15. ‘மா’ என்னும் சொல்லின் பொருள் _____________.</p>
+      <label><input type="radio" name="q15" value="மாடம்">மாடம்</label>
+      <label><input type="radio" name="q15" value="வானம்">வானம்</label>
+	  <label><input type="radio" name="q15" value="விலங்கு">விலங்கு</label>
+      <label><input type="radio" name="q15" value="அம்மா">அம்மா</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">16. கீழ்க்கண்ட கூற்றுகளுள் சரியானது எது?</p><br>
+	  <p>I. நிலம், நீர், நெருப்பு, காற்று, ஆகாயம் என்னும் ஐந்தும் கலந்தது இவ்வுலகம் என்பது அறிவியல் உண்மை. தொல்காப்பியர் தமது தொல்காப்பியம் என்னும் நூலில் இக்கருத்தைக் குறிப்பிட்டுள்ளார். மேலும் உலக உயிர்களை ஓரறிவு முதல் ஆறறிவு வரை வகைப்படுத்தியும் உள்ளார்.</p>
+	  <p>II. கடல் நீர் ஆவியாகி மேகமாகும். பின்னர் மேகம் குளிர்ந்து மழையாகப் பொழியும். பழந்தமிழ் இலக்கியங்களான முல்லைப்பாட்டு, பரிபாடல், திருக்குறள், கார்நாற்பது, திருப்பாவை முதலிய நூல்களில் இந்த அறிவியல் செய்தி குறிப்பிடப்பட்டுள்ளது.</p>
+      <label><input type="radio" name="q16" value="I தவறு">I தவறு</label>
+      <label><input type="radio" name="q16" value="II தவறு">II தவறு</label>
+	  <label><input type="radio" name="q16" value="I, II இரண்டுமே தவறு">I, II இரண்டுமே தவறு</label>
+      <label><input type="radio" name="q16" value="I, II இரண்டுமே சரி">I, II இரண்டுமே சரி</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">17. திரவப் பொருள்களை எவ்வளவு அழுத்தினாலும் அவற்றின் அளவைச் சுருக்க முடியாது – என்ற அறிவியல் கருத்து “ஆழ அமுக்கி முகக்கினும் ஆழ்கடல் நீர் நாழி முகவாது நால் நாழி” ஆகும். – இந்த பாடல் வரியின் ஆசிரியர் யார்?</p>
+      <label><input type="radio" name="q17" value="தொல்காப்பியர்">தொல்காப்பியர்</label>
+      <label><input type="radio" name="q17" value="மாணிக்கவாசகர்">மாணிக்கவாசகர்</label>
+	  <label><input type="radio" name="q17" value="ஒளவையார்">ஒளவையார்</label>
+      <label><input type="radio" name="q17" value="இளங்கோவடிகள்">இளங்கோவடிகள்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">18. போர்க்களத்தில் மார்பில் புண்படுவது இயல்பு. வீரர் ஒருவரின் காயத்தை வெண்ணிற ஊசியால் தைத்த செய்தி _______________ என்னும் நூலில் இடம்பெற்றுள்ளது.</p>
+      <label><input type="radio" name="q18" value="நற்றிணை">நற்றிணை</label>
+      <label><input type="radio" name="q18" value="கார்நாற்பது">கார்நாற்பது</label>
+	  <label><input type="radio" name="q18" value="தொல்காப்பியம்">தொல்காப்பியம்</label>
+      <label><input type="radio" name="q18" value="பதிற்றுப்பத்து">பதிற்றுப்பத்து</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">19. நெடு வெள்ளூசி நெடு வசி பரந்த வடு – என்ற பாடல் வரி இடம்பெற்றுள்ள நூல் எது?</p>
+      <label><input type="radio" name="q19" value="நற்றிணை">நற்றிணை</label>
+      <label><input type="radio" name="q19" value="பதிற்றுப்பத்து">பதிற்றுப்பத்து</label>
+	  <label><input type="radio" name="q19" value="தொல்காப்பியம்">தொல்காப்பியம்</label>
+      <label><input type="radio" name="q19" value="கார்நாற்பது">கார்நாற்பது</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">20. சுறாமீன் தாக்கியதால் ஏற்பட்ட புண்ணை, நரம்பினால் தைத்த செய்தி ____________ என்னும் நூலில் காணப்படுகிறது. முற்கால இலக்கியங்களில் இடம் பெற்றுள்ள அறுவை மருத்துவத்துக்கான இன்றைய கூறுகள் வியப்பளிக்கின்றன அல்லவா?</p>
+      <label><input type="radio" name="q20" value="நற்றிணை">நற்றிணை</label>
+      <label><input type="radio" name="q20" value="பதிற்றுப்பத்து">பதிற்றுப்பத்து</label>
+	  <label><input type="radio" name="q20" value="தொல்காப்பியம்">தொல்காப்பியம்</label>
+      <label><input type="radio" name="q20" value="கார்நாற்பது">கார்நாற்பது</label><br>
+	</div>
+
+    
+  <button type="button" onclick="checkAnswers()">சரிபார்க்கவும்</button>
+  
+  </form>
+
+
+<h3 id="result"></h3>
+
+</div>
+
+  <script>
+function checkAnswers() {
+  let score = 0;
+
+  const answers = {
+    q1: "I, II, III, IV அனைத்தும் சரி",
+    q2: "I, II, III, IV அனைத்தும் சரி",
+    q3: "I, II, III, IV அனைத்தும் சரி",
+    q4: "I, II, III, IV அனைத்தும் சரி",
+    q5: "I, II, III, IV அனைத்தும் சரி",
+    q6: "I, II, III, IV அனைத்தும் சரி",
+    q7: "அறிவுமதி",
+    q8: "அறிவுமதி",
+    q9: "பழமை",
+    q10: "இடம் + புறம்",
+    q11: "சீர் + இளமை",
+    q12: "சிலப்பதிகாரம்",
+    q13: "கணினித்தமிழ்",
+    q14: "பாரதியார்",
+    q15: "விலங்கு",
+    q16: "I, II இரண்டுமே சரி",
+    q17: "ஒளவையார்",
+    q18: "பதிற்றுப்பத்து",
+    q19: "பதிற்றுப்பத்து",
+    q20: "நற்றிணை"
+  };
+
+  let unanswered = [];
+
+  // ✅ Step 1: Check unanswered மட்டும்
+  for (let q in answers) {
+    let selected = document.querySelector(`input[name="${q}"]:checked`);
+    if (!selected) {
+      unanswered.push(q);
+    }
+  }
+
+  // 🚨 If any unanswered → STOP here
+  if (unanswered.length > 0) {
+    document.getElementById("result").style.color = "red";
+    document.getElementById("result").innerText =
+      "தயவுசெய்து அனைத்து கேள்விகளுக்கும் பதிலளிக்கவும்! விடுபட்டவை: " +
+      unanswered.join(", ");
+    return;
+  }
+
+  // ✅ Step 2: Now do highlighting + score
+  for (let q in answers) {
+    let options = document.querySelectorAll(`input[name="${q}"]`);
+
+    options.forEach(option => {
+      let label = option.parentElement;
+      label.classList.remove("correct", "wrong");
+
+      if (option.value === answers[q]) {
+        label.classList.add("correct");
+      }
+
+      if (option.checked) {
+        if (option.value === answers[q]) {
+          score++;
+        } else {
+          label.classList.add("wrong");
+        }
+      }
+    });
+  }
+
+  // ✅ Final score
+  document.getElementById("result").style.color = "green";
+  document.getElementById("result").innerText =
+    "உங்கள் மதிப்பெண்: " + score + "/" + Object.keys(answers).length;
+}
+
+</script>
+</body>
+</html>
